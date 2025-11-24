@@ -33,3 +33,33 @@ A new database named **`world_layoffs`** was created to manage and store the dat
 ```sql
 CREATE DATABASE world_layoffs;
 ```
+## SQL Data Cleaning Project – Notes
+
+- All columns were imported as **TEXT** by default, except:
+  - `total_laid_off` → INT  
+  - `funds_raised_millions` → INT  
+
+### **2. After importing the raw Excel file into MySQL, I created a **copy of the table** so that all cleaning operations are performed on the duplicate instead of the original (following real-world best practices).
+
+### Cleaning Steps Performed
+a. **Remove Duplicates**  
+   - Identify duplicate rows using `ROW_NUMBER()`  
+   - Delete rows where row_number > 1  
+
+b. **Standardize the Data**  
+   - Fix inconsistent formatting  
+   - Trim extra spaces  
+   - Standardize industry, location, and country names  
+   - Convert data types where needed  
+
+c. **Handle Null Values**  
+   - Detect and replace NULLs or blank fields  
+   - Correct invalid or missing dates  
+   - Fill missing categories where possible  
+
+d. **Remove Unnecessary Data**  
+   - Drop rows with no meaningful data  
+   - Remove invalid entries  
+   - Clean up inconsistent records  
+
+This cleaned data is now ready for further analysis and reporting.
