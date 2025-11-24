@@ -39,7 +39,8 @@ CREATE DATABASE world_layoffs;
   - `total_laid_off` → INT  
   - `funds_raised_millions` → INT  
 
-### **2. After importing the raw Excel file into MySQL, I created a **copy of the table** so that all cleaning operations are performed on the duplicate instead of the original (following real-world best practices).
+### **2. Createing copy of the raw data
+After importing the raw Excel file into MySQL, I created a **copy of the table** so that all cleaning operations are performed on the duplicate instead of the original (following real-world best practices).
 
 ### Cleaning Steps Performed
 a. **Remove Duplicates**  
